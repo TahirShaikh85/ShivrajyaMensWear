@@ -10,7 +10,7 @@ export function fetchAllProducts() {
 
 export function fetchAllCategories() {
     return new Promise(async (resolve) => {
-        const response = await fetch(`${baseUrl}/categories`);
+        const response = await fetch(`${baseUrl}/type/categories`);
         const data = await response.json();
         resolve({ data });
     })
@@ -18,7 +18,7 @@ export function fetchAllCategories() {
 
 export function fetchAllLabels() {
     return new Promise(async (resolve) => {
-        const response = await fetch(`${baseUrl}/labels`);
+        const response = await fetch(`${baseUrl}/type/labels`);
         const data = await response.json();
         resolve({ data });
     })

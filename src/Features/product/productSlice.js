@@ -7,7 +7,6 @@ import {
     fetchProductById
 } from './productApi';
 
-import { createProduct, updateProduct,deleteProduct } from '../../Admin/Features/Product/AdminProductApi';
 
 const initialState = {
     products: [],
@@ -73,31 +72,6 @@ export const fetchProductsByIdAsync = createAsyncThunk(
         return response.data;
     }
 );
-
-export const createProductAsync = createAsyncThunk(
-    'product/create',
-    async (product) => {
-        const response = await createProduct(product);
-        return response.data;
-    }
-);
-
-export const updateProductAsync = createAsyncThunk(
-    'product/update',
-    async (update) => {
-        const response = await updateProduct(update);
-        return response.data;
-    }
-);
-
-export const deleteProductAsync = createAsyncThunk(
-    'product/delete',
-    async(id)=>{
-        const response = await deleteProduct(id);
-        return response.data;
-    }
-)
-
 
 // ---------- main slice ------------
 export const productSlice = createSlice({
@@ -176,35 +150,6 @@ export const productSlice = createSlice({
                 state.status = 'idle';
                 state.selectedProduct = action.payload;
             })
-
-            // create product
-            .addCase(createProductAsync.pending, (state) => {
-                state.status = 'loading';
-            })
-            .addCase(createProductAsync.fulfilled, (state, action) => {
-                state.status = 'idle';
-                state.products.push(action.payload);
-            })
-
-            // update product
-            .addCase(updateProductAsync.pending, (state) => {
-                state.status = 'loading';
-            })
-            .addCase(updateProductAsync.fulfilled, (state, action) => {
-                state.status = 'idle';
-                const index = state.products.findIndex(
-                    (product) => product.id === action.payload.id
-                );
-                state.products[index] = action.payload;
-            })
-
-            // delete product
-            .addCase(deleteProductAsync.pending, (state) => {
-                state.status = 'loading';
-            })
-            .addCase(deleteProductAsync.fulfilled, (state, action) => {
-                state.status = 'idle';
-            });
     }
 })
 

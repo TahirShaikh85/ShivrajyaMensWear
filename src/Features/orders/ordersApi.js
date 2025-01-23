@@ -2,7 +2,7 @@ const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 
 export function createOrder(order) {
     return new Promise(async (resolve) => {
-        const response = await fetch(`${baseUrl}/orders`, {
+        const response = await fetch(`${baseUrl}/order`, {
             method: 'POST',
             body: JSON.stringify(order),
             headers: { 'content-type': 'application/json' },
@@ -15,7 +15,7 @@ export function createOrder(order) {
 
 export function updateOrder(order) {
     return new Promise(async (resolve) => {
-      const response = await fetch(`${baseUrl}/orders?id=${order.id}`, {
+      const response = await fetch(`${baseUrl}/order?id=${order.id}`, {
         method: 'PATCH',
         body: JSON.stringify(order),
         headers: { 'content-type': 'application/json' },

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { logEvent } from "firebase/analytics";
-import { analytics } from "./Admin/firebase";
+import { analytics } from "../firebase";
 
 function ScreenViewTracker({ screenName }) {
     useEffect(() => {

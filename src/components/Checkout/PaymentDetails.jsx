@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { createOrderAsync, orderId } from '../../Features/orders/orderSlice';
 import { useNavigate } from 'react-router-dom';
 import { logEvent } from "firebase/analytics";
-import { analytics } from '../../Admin/firebase';
+import { analytics } from '../../../firebase';
 import OrderSummary from './OrderSummary';
 
 // environment variables

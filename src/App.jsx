@@ -16,12 +16,6 @@ import { useDispatch } from "react-redux";
 import { fetchWishlistItemsAsync } from "./Features/Wishlist/wishlistSlice";
 import { fetchAllProductsAsync } from "./Features/product/productSlice";
 
-import LoginPage from "./Admin/Pages/LoginPage";
-import Protected from "./Admin/Features/Protected";
-import AdminPanel from "./Admin/Pages/AdminPanel";
-import AdminProductDetailPage from "./Admin/Pages/AdminProductDetailPage";
-import AdminProductFormPage from "./Admin/Pages/AdminProductFormPage";
-import AdminOrdersPage from "./Admin/Pages/AdminOrdersPage";
 import PrivacyPage from "./Pages/PrivacyPage";
 import TermsPage from "./Pages/TermsPage";
 
@@ -51,9 +45,6 @@ export default function App() {
 
   return (
     <>
-      {
-        location.pathname == '/' && <Tagline />
-      }
       <ScrollToTop />
       {/* <Product_Navbar/> */}
       <Routes>
@@ -68,36 +59,6 @@ export default function App() {
 
         <Route exact path="/privacypolicy" element={<PrivacyPage />}></Route>
         <Route exact path="/terms" element={<TermsPage />}></Route>
-
-        <Route exact path="/login" element={<LoginPage />}></Route>
-        <Route exact path="/admin" element={
-          <Protected>
-            <AdminPanel currentWidth={width} />
-          </Protected>
-        }>
-        </Route>
-        <Route exact path="/admin/product-detail/:id" element={
-          <Protected>
-            <AdminProductDetailPage currentWidth={width} />
-          </Protected>
-        }>
-        </Route>
-        <Route exact path="/admin/product-form" element={
-          <Protected>
-            <AdminProductFormPage />
-          </Protected>
-        }></Route>
-        <Route exact path="/admin/product-form/edit/:id" element={
-          <Protected>
-            <AdminProductFormPage />
-          </Protected>
-        }></Route>
-        <Route exact path="/admin/orders" element={
-          <Protected>
-            <AdminOrdersPage />
-          </Protected>
-        }></Route>
-
       </Routes>
 
       {width < 640 && <BottomNav />}

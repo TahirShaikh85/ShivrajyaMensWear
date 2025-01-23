@@ -9,7 +9,7 @@ const Categories = () => {
     const categoryContainerRef = useRef(null);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const newCategories = useSelector(selectAllCategories)
+    const newCategories = useSelector(selectAllCategories);
 
     useEffect(()=>{
         dispatch(fetchAllCategoriesAsync());
