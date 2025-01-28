@@ -35,7 +35,7 @@ export default function TrackOrderForm() {
         if (trackingId.length >= 10) {
             try {
 
-                let response = await trackParsel({ orderIDorMobile: trackingId })
+                let response = await trackParsel(trackingId)
 
                 if (response.error) {
                     dispatch(trackedOrderError(response.error.data));
