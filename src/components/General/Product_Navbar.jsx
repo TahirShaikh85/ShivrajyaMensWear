@@ -1,4 +1,4 @@
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/images/categories/logo.png'
 import { NavLink } from 'react-router-dom';
 import Filter from '../Product/Filter'
 import { useNavigate } from "react-router-dom";

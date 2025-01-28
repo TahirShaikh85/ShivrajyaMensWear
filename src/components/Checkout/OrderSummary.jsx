@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
-import UPI from '../../assets/upi.jpg';
-import Cash from '../../assets/rupees.png';
+import UPI from '../../assets/images/categories/upi.jpg';
+import Cash from '../../assets/images/categories/rupees.png';
 import { useSelector,useDispatch } from 'react-redux';
 import { selectBuyNowProduct,orderPaymentMode } from '../../Features/checkout/checkoutSlice';
 import { useNavigate } from 'react-router-dom';

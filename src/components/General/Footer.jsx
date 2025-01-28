@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/images/categories/logo.png'
 import { Link } from 'react-router-dom'
 import { AttentionSeeker  } from "react-awesome-reveal";
 
