@@ -9,7 +9,7 @@ import Contact from "../components/Home/Contact";
 import Footer from "../components/General/Footer";
 import DiscountBannerHome from "../components/Home/DiscountBannerHome";
 import externalImages from "../assets/external-img.json"
-
+import ImgSection from "../components/Home/ImgSection";
 
 export default function HomePage({ currentWidth }) {
 
@@ -30,6 +30,7 @@ export default function HomePage({ currentWidth }) {
         </div>
       }
       <DeliveryFeatures />
+      <ImgSection />
       <FeaturedProducts />
 
       {
