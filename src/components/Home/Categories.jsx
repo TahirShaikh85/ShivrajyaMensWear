@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllCategoriesAsync, selectAllCategories } from '../../Features/product/productSlice';
 import { productCategory ,fetchProductsByFiltersAsync } from '../../Features/product/productSlice';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 const Categories = () => {
     const categoryContainerRef = useRef(null);
@@ -32,22 +33,20 @@ const Categories = () => {
     }
 
     return (
-        <div className='category-wrapper px-4 py-4'>
-            <div className="category-container flex flex-row gap-6 md:gap-12 overflow-x-scroll hide-scrollbar" ref={categoryContainerRef}>
-                <Fade delay={500} direction='left'>
+        <div className='category-wrapper py-4 md:py-3 px-0 md:px-12'>
+            <div className="category-container flex flex-row gap-6 md:gap-7 overflow-x-scroll hide-scrollbar" ref={categoryContainerRef}>
                     <NavLink to="/" value="/" className="category-box">
-                        <div className="image-box w-20 h-20 md:w-32 md:h-32 pixalated">
+                        <div className="image-box w-20 h-20 md:w-24 md:h-24 pixalated">
                             <img src="https://firebasestorage.googleapis.com/v0/b/shivrajyamenswear.appspot.com/o/banner%2Fbigsale.png?alt=media&token=fc9f0c93-37ce-42d8-83eb-6a8e5b5d6168" alt="shirts" className='w-full h-full' style={{ borderRadius: '50%' }} />
                         </div>
                     </NavLink>
-                </Fade>
                 {newCategories.map((category, index) => (
-                    <Fade delay={500} direction='left' key={index}>
+                    <Fade delay={500} direction='left' triggerOnce={true} key={index}>
                         <div  className="category-box"  onClick={()=>navigateToCategory(category.value)}>
-                            <div className="image-box w-20 h-20 md:w-32 md:h-32 pixalated">
+                            <div className="image-box w-20 h-20 md:w-24 md:h-24 pixalated">
                                 <img src={category.img} alt={category.value} className='w-full h-full' style={{ borderRadius: '50%' }} />
                             </div>
-                            <div className="name text-center mt-2 font-geolatica text-sm md:text-lg">
+                            <div className="name text-center w-[93px] whitespace-nowrap overflow-hidden text-clip mt-2 text-sm text-gray-700">
                                 {category.label}
                             </div>
                         </div>
@@ -56,16 +55,10 @@ const Categories = () => {
             </div>
             <div className="scroll-buttons-container hidden md:block">
                 <button className="scroll-buttons right-scroll" onClick={scrollRight}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="orange" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-
+                    <ChevronRightIcon className='w-6 h-6' stroke='orange' strokeWidth={2}/>
                 </button>
                 <button className="scroll-buttons left-scroll" onClick={scrollLeft}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="orange" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-
+                    <ChevronLeftIcon className='w-6 h-6' stroke='orange' strokeWidth={2}/>
                 </button>
             </div>
         </div>

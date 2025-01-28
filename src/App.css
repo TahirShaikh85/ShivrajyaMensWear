@@ -76,7 +76,7 @@
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to right, red, orange) border-box;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 1.5px solid transparent;
 }
 
 .category-wrapper {
@@ -90,8 +90,8 @@
 }
 
 .scroll-buttons {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   background: white;
   display: flex;
   justify-content: center;
@@ -102,62 +102,18 @@
 
 .right-scroll {
   position: absolute;
-  top: 35%;
+  top: 26%;
   left: 94%;
 }
 
 .left-scroll {
   position: absolute;
-  top: 35%;
+  top: 26%;
   left: 2.5%;
 }
 
 /* ************** End Categories Component ************** */
 
-/* ************** Delivery features component ************** */
-
-.delivery-features {
-  /* background-color: var(--light-grayish-blue); */
-  background: rgb(235, 244, 255);
-}
-
-/* ************** End Delivery features component ************** */
-
-/* ************** Home page ************** */
-/* .shine {
-  background: var(--pale-orange);
-  color: black;
-  animation: flicker 1.5s infinite alternate;
-}
-/* Flickering animation 
-@keyframes flicker {
-    
-  25% {
-    background: var(--light-grayish-blue);
-  
-  }
-  50%{
-    background: var(--pale-orange);
-  }
-  
-  75% {        
-      text-shadow: none;
-      background: var(--light-grayish-blue);
-  } 
-  100%{
-    background: var(--pale-orange);
-  }   
-} */
-
-
-.fa-instagram {
-  background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ************** End Home page ************** */
 
 .discount-banner {
   background-image: linear-gradient(to left top, #ffd202, #ffac32, #ff865b, #ff6983, #ff5ea7);
