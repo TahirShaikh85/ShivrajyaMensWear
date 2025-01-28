@@ -7,7 +7,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import { buyNowProduct } from '../../Features/checkout/checkoutSlice';
 import { AttentionSeeker } from 'react-awesome-reveal';
 import { logEvent } from "firebase/analytics";
-import { analytics } from '../../Admin/firebase';
+import { analytics } from '../../../firebase';
 
 import 'react-toastify/dist/ReactToastify.min.css';
 import Loader from '../General/Loader';

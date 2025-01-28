@@ -4,9 +4,9 @@ import { Carousel } from "@material-tailwind/react";
 const Banner = ({ images }) => {
   return (
     <Carousel
-      className=""
+      className="mt-[1px]"
       autoplay={true}
-      transition={{ type: 'tween', duration: 1 }}
+      transition={{ type: 'tween', duration: 1.5 }}
       loop={true}
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">

@@ -32,17 +32,19 @@
 .badge {
   position: absolute;
   background: var(--bhagwa-color);
-  background-color: red;
-  color: #fff;
+  background-color: rgb(251, 251, 251);
+  font-size: 12px;
+  color: #000;
   font-weight: 500;
-  height: 25px;
-  width: 25px;
+  height: 18px;
+  width: 18px;
   border-radius: 100%;
   letter-spacing: 0;
-  left: 10px;
-  top: -15px;
+  left: 47px;
+  top: -9px;
   text-align: center;
   vertical-align: middle;
+  
 }
 
 .search-box:focus {
@@ -508,37 +510,43 @@ section {
   left: 50%;
 }
 
-.track-orderDetail{
+.track-orderDetail {
   background-color: var(--pale-orange);
 }
-.track-orderDetail .title{
+
+.track-orderDetail .title {
   color: var(--very-dark-blue);
 }
-.track-orderDetail .brand{
-  color: var(--grayish-blue);
-}
-.track-orderDetail .bold{
-  color: var(--very-dark-blue);
-}
-.track-orderDetail .normal{
+
+.track-orderDetail .brand {
   color: var(--grayish-blue);
 }
 
-.privacy-page{
+.track-orderDetail .bold {
+  color: var(--very-dark-blue);
+}
+
+.track-orderDetail .normal {
+  color: var(--grayish-blue);
+}
+
+.privacy-page {
   background: var(--light-grayish-blue);
 }
-.privacy-page p, li{
+
+.privacy-page p,
+li {
   color: var(--dark-grayish-blue);
   line-height: 1.5;
 }
 
 @keyframes rotation {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -639,11 +647,12 @@ section {
   .empty-cart {
     width: 100%;
   }
+
   .empty-cart svg {
     max-width: 100%;
     padding: 0;
     margin-top: 4rem;
     margin-bottom: 2rem;
-}
+  }
 
 }

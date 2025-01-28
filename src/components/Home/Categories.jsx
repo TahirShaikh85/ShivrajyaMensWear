@@ -32,7 +32,7 @@ const Categories = () => {
     }
 
     return (
-        <div className='category-wrapper px-4 py-6 md:px-16 md:pb-2 md:pt-5'>
+        <div className='category-wrapper px-4 py-4'>
             <div className="category-container flex flex-row gap-6 md:gap-12 overflow-x-scroll hide-scrollbar" ref={categoryContainerRef}>
                 <Fade delay={500} direction='left'>
                     <NavLink to="/" value="/" className="category-box">

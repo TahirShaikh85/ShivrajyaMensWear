@@ -178,8 +178,9 @@ const PaymentDetails = () => {
 
     // main razorpay function 
     const handlePayment = async (orderDetails, formAddressData) => {
+        
         try {
-            const orderUrl = `${baseUrl}/payment/orders`;
+            const orderUrl = `${baseUrl}/payment`;
             const response = await fetch(orderUrl, {
                 method: "POST",
                 headers: {

@@ -8,9 +8,9 @@ export const trackOrderApi = createApi({
 
         trackMyOrder: builder.mutation({
             query: (orderIDorMobile) => ({
-                url: '/track',
-                method: 'POST',
-                body: orderIDorMobile
+                url: `/order/track?constraint=${orderIDorMobile}`,
+                method: 'GET',
+                // body: orderIDorMobile
             })
         })
 

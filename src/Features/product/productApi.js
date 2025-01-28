@@ -49,7 +49,6 @@ export function fetchProductsByFilters(filter) {
     }
 
     return new Promise(async (resolve) => {
-        //TODO: we will not hard-code server URL here
         const response = await fetch(`${baseUrl}/products?${queryString}`);
         const data = await response.json()
         resolve({ data })
@@ -59,8 +58,9 @@ export function fetchProductsByFilters(filter) {
 
 export function fetchProductById(id) {
     return new Promise(async (resolve) => {
-        const response = await fetch(`${baseUrl}/getSingleProduct?id=${id}`);
+        const response = await fetch(`${baseUrl}/products/${id}`);
         const data = await response.json();
+        
         resolve({ data });
     })
 }

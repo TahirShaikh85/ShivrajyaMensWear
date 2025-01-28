@@ -29,8 +29,8 @@ export default function HomePage({ currentWidth }) {
       }
       {currentWidth > 640 &&
         <div>
-          <Categories />
           <Banner images={desktop_banner_images} />
+          <Categories />
         </div>
       }
       <DeliveryFeatures />
@@ -43,7 +43,7 @@ export default function HomePage({ currentWidth }) {
           <Banner images={homePage_middle_banners} />
         </>
       }
-      <Instagram />
+      {/* <Instagram /> */}
       <Contact />
       <Footer />
 
