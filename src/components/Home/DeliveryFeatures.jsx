@@ -1,12 +1,13 @@
 import { BanknotesIcon, PhoneArrowUpRightIcon, ScaleIcon, TruckIcon } from '@heroicons/react/24/outline';
+import SmallDivider from '../General/SmallDivider';
 
 const DeliveryFeatures = () => {
     return (
         <section className='delivery-features py-4 mb-4 md:py-6 md:mt-0'>
-            <h4 className='text-center uppercase text-2xl font-bold mb-2 text-gray-800 tracking-wider'>
+            <h4 className='text-center uppercase text-2xl font-bold text-gray-800 tracking-widest font-agdasima'>
                 <mark className='bg-accent-light'>Welcome to Store</mark>
             </h4>
-            <div className='w-16 h-1 rounded-md mx-auto mb-4 bg-accent'></div>
+            <SmallDivider />
             <p className='text-gray-600 w-1/2 mx-auto text-center px-2 mb-8'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium quis aut soluta quos nobis fugiat recusandae voluptas corporis ullam.
             </p>

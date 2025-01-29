@@ -44,7 +44,7 @@
   top: -9px;
   text-align: center;
   vertical-align: middle;
-  
+
 }
 
 .search-box:focus {
@@ -106,15 +106,26 @@
   cursor: pointer;
 }
 
+.categories-scroll-buttons {
+  width: 30px;
+  height: 30px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #e2e0e0;
+}
+
 .right-scroll {
   position: absolute;
-  top: 26%;
-  left: 94%;
+  top: 32%;
+  left: 95%;
 }
 
 .left-scroll {
   position: absolute;
-  top: 26%;
+  top: 32%;
   left: 2.5%;
 }
 
@@ -138,7 +149,7 @@
 /* ************** Product details page ************** */
 
 .item {
-  margin-top: 2rem !important;
+  margin-top: 1rem !important;
   padding: 0 3rem;
   max-width: 134rem;
   margin: auto;
@@ -152,16 +163,17 @@ section {
 }
 
 .img-main {
-  max-width: 100%;
+  max-width: 50%;
+  max-height: 50%;
   border-radius: 5%;
   cursor: pointer;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .img-btns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .img-btn {
@@ -186,10 +198,9 @@ section {
 }
 
 .price {
-  margin-top: 3rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.7rem;
 }
 
 .price-sub__heading {
@@ -207,7 +218,7 @@ section {
 }
 
 .price-txt {
-  margin-top: 2rem;
+  margin-top: 0.8rem;
   font-size: 1.2rem;
   color: var(--dark-grayish-blue);
   line-height: 1.5;
@@ -250,7 +261,7 @@ section {
 
 .price-btnbox {
   display: flex;
-  gap: 2.5rem;
+  justify-content: space-evenly;
 }
 
 .price-btns {
@@ -298,15 +309,15 @@ section {
 
 /* buy now button */
 .btn--orange {
-  padding: 2rem 4rem;
+  padding: 0.8rem 1rem;
   font-size: 1rem;
   font-weight: 700;
   color: var(--white);
   background-color: var(--bhagwa-color);
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   cursor: pointer;
-  height: 30%;
+  height: 50%;
   color: white;
   transition: .5s;
 }
@@ -319,6 +330,7 @@ section {
 
 .size-box select {
   width: 40%;
+  height: 2.8rem;
   background: --var(--pale-orange) !important;
   border: 1px solid var(--bhagwa-color);
   border-radius: 4px;
@@ -330,7 +342,7 @@ section {
   display: flex;
   gap: 0.8rem;
   margin-left: 2rem;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   background: black;
   color: white;
   border-radius: 5px;
@@ -586,7 +598,7 @@ li {
     align-items: center;
   }
 
-  
+
 
   .empty-cart {
     width: 100%;

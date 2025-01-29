@@ -54,10 +54,10 @@ const Categories = () => {
                 ))}
             </div>
             <div className="scroll-buttons-container hidden md:block">
-                <button className="scroll-buttons right-scroll" onClick={scrollRight}>
+                <button className="categories-scroll-buttons right-scroll" onClick={scrollRight}>
                     <ChevronRightIcon className='w-6 h-6' stroke='orange' strokeWidth={2}/>
                 </button>
-                <button className="scroll-buttons left-scroll" onClick={scrollLeft}>
+                <button className="categories-scroll-buttons left-scroll" onClick={scrollLeft}>
                     <ChevronLeftIcon className='w-6 h-6' stroke='orange' strokeWidth={2}/>
                 </button>
             </div>

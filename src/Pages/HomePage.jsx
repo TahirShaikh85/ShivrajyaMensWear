@@ -40,7 +40,7 @@ export default function HomePage({ currentWidth }) {
           <Banner images={externalImages.homePage_middle_banners} />
         </>
       }
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
 
     </div>
