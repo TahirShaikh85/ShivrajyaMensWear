@@ -1,0 +1,10 @@
+export {default as HomePage} from './HomePage';
+export {default as CheckoutPage} from './CheckoutPage';
+export {default as OrderSuccessPage} from './OrderSuccessPage';
+export {default as PrivacyPage} from './PrivacyPage';
+export {default as PageNotFound} from './PageNotFound';
+export {default as ProductDetailsPage} from './ProductDetailsPage';
+export {default as ProductListPage} from './ProductListPage';
+export {default as TermsPage} from './TermsPage';
+export {default as TrackOrderPage} from './TrackOrderPage';
+export {default as WishlistPage} from './WishlistPage';

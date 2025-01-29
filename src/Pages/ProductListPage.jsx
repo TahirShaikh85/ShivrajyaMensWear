@@ -1,11 +1,7 @@
 import React, { Suspense } from 'react'
-// import ProductList from '../components/Product/ProductList'
 const ProductList = React.lazy(() => import('../components/Product/ProductList'));
-import Product_Navbar from '../components/General/Product_Navbar'
-import Navbar from '../components/General/Navbar'
-import CategoryChips from '../components/Product/CategoryChips'
-import DiscountBanner from '../components/Product/DiscountBanner'
-import Loader from '../components/General/Loader';
+import { Product_Navbar, Loader, Navbar } from '../components/General'
+import { CategoryChips, DiscountBanner } from '../components/Product'
 import ScreenViewTracker from '../ScreenViewTracker';
 
 const ProductListPage = ({ currentWidth }) => {
@@ -23,7 +19,7 @@ const ProductListPage = ({ currentWidth }) => {
           <DiscountBanner />
         </div>
       }
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <ProductList currentWidth={currentWidth} />
       </Suspense>
     </div>

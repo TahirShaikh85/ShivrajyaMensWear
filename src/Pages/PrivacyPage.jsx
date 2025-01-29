@@ -1,7 +1,5 @@
 import React from 'react'
-import Product_Navbar from '../components/General/Product_Navbar'
-import Navbar from '../components/General/Navbar'
-import Footer from "../components/General/Footer"
+import { Product_Navbar, Navbar, Footer } from '../components/General'
 
 const PrivacyPage = ({ currentWidth }) => {
     return (
@@ -86,7 +84,7 @@ const PrivacyPage = ({ currentWidth }) => {
 
             </div>
 
-            <Footer/>
+            <Footer />
         </>
     )
 }

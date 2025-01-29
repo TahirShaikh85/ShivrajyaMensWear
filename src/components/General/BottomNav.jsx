@@ -1,5 +1,5 @@
-import { HomeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import React from 'react'
+import { HomeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 
 const BottomNav = () => {

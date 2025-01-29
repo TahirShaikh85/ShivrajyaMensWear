@@ -2,7 +2,7 @@ import React from 'react'
 import { selectAllProducts } from '../../Features/product/productSlice';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import SmallDivider from '../General/SmallDivider';
+import { SmallDivider } from '../General';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
 
 export default function FeaturedProducts() {
@@ -48,7 +48,7 @@ export default function FeaturedProducts() {
           </div>
         ))}
       </div>
-      <h4 className='hidden text-center pt-4 md:flex justify-center items-center cursor-pointer text-gray-700 font-semibold' onClick={()=>navigate('/products')}>
+      <h4 className='hidden text-center pt-4 md:flex justify-center items-center cursor-pointer text-gray-700 font-semibold' onClick={() => navigate('/products')}>
         Explore products of our store <ArrowLongRightIcon className='ml-2 w-5 h-5' />
       </h4>
     </div>

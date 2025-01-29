@@ -8,7 +8,6 @@ import { buyNowProduct } from '../../Features/checkout/checkoutSlice';
 import { AttentionSeeker } from 'react-awesome-reveal';
 import { logEvent } from "firebase/analytics";
 import { analytics } from '../../../firebase';
-
 import 'react-toastify/dist/ReactToastify.min.css';
 import Loader from '../General/Loader';
 import { HeartIcon, MinusIcon, PlusIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';

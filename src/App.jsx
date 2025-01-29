@@ -1,23 +1,12 @@
-import HomePage from "./Pages/HomePage";
 import './App.css'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import ProductListPage from "./Pages/ProductListPage";
-import BottomNav from "./components/General/BottomNav";
 import { useState, useEffect } from "react";
-import Tagline from "./components/General/Tagline";
-import ProductDetailsPage from "./Pages/ProductDetailsPage";
-import CheckoutPage from "./Pages/CheckoutPage";
-import ScrollToTop from "./components/General/ScrollToTop";
-import TrackOrderPage from "./Pages/TrackOrderPage";
-import WishlistPage from "./Pages/WishlistPage";
-import PageNotFound from "./Pages/PageNotFound";
-import OrderSuccessPage from "./Pages/OrderSuccessPage";
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 import { fetchWishlistItemsAsync } from "./Features/Wishlist/wishlistSlice";
 import { fetchAllProductsAsync } from "./Features/product/productSlice";
+import { HomePage, ProductListPage, ProductDetailsPage, CheckoutPage, TrackOrderPage, WishlistPage, PageNotFound, OrderSuccessPage, PrivacyPage, TermsPage } from "./Pages"
+import { BottomNav, ScrollToTop} from "./components/General";
 
-import PrivacyPage from "./Pages/PrivacyPage";
-import TermsPage from "./Pages/TermsPage";
 
 export default function App() {
 

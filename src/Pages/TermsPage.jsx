@@ -1,7 +1,5 @@
 import React from 'react'
-import Product_Navbar from '../components/General/Product_Navbar'
-import Navbar from '../components/General/Navbar'
-import Footer from '../components/General/Footer'
+import { Product_Navbar, Navbar, Footer } from '../components/General'
 
 const TermsPage = ({ currentWidth }) => {
     return (
@@ -10,7 +8,7 @@ const TermsPage = ({ currentWidth }) => {
                 currentWidth < 640 ? <Product_Navbar /> : <Navbar />
             }
             <div className="privacy-page p-4 pt-4 md:p-8 md:m-4">
-                
+
                 <h1 className="text-3xl font-semibold mb-4">Terms & Conditions</h1>
 
                 <p className="mb-4">
@@ -56,7 +54,7 @@ const TermsPage = ({ currentWidth }) => {
                 </p>
 
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

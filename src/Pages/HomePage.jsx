@@ -1,14 +1,7 @@
-import React, { useState, useEffect,Suspense } from "react";
-import Search from "../components/General/Search";
-import Categories from "../components/Home/Categories";
-import Banner from "../components/Home/Banner";
-import DeliveryFeatures from "../components/Home/DeliveryFeatures";
-import FeaturedProducts from "../components/Home/FeaturedProducts"
-import Navbar from "../components/General/Navbar";
-import Footer from "../components/General/Footer";
-import DiscountBannerHome from "../components/Home/DiscountBannerHome";
+import React, { useState, useEffect, Suspense } from "react";
+import { Search, Navbar, Footer } from "../components/General";
+import { Banner, Categories, DeliveryFeatures, FeaturedProducts, DiscountBannerHome, ImgSection } from "../components/Home";
 import externalImages from "../assets/external-img.json"
-import ImgSection from "../components/Home/ImgSection";
 
 export default function HomePage({ currentWidth }) {
 

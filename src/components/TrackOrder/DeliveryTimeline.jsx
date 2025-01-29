@@ -7,7 +7,7 @@ import {
   TimelineHeader,
 } from "@material-tailwind/react";
 import { AttentionSeeker, Fade } from "react-awesome-reveal";
-import { selectTrackedOrderData, selectTrackedOrderError, trackedOrderData, trackedOrderError } from "../../Features/trackOrder/trackOrderSlice";
+import { selectTrackedOrderData, selectTrackedOrderError } from "../../Features/trackOrder/trackOrderSlice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { AdjustmentsVerticalIcon, ArchiveBoxIcon, ArrowPathRoundedSquareIcon, CheckBadgeIcon, TruckIcon, XCircleIcon } from "@heroicons/react/24/outline";
