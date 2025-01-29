@@ -1,5 +1,5 @@
-import React,{Suspense} from 'react'
-const ProductDetails = React.lazy(()=>import('../components/Product/ProductDetails'))
+import React, { Suspense } from 'react'
+const ProductDetails = React.lazy(() => import('../components/Product/ProductDetails'))
 // import ProductDetails from '../components/Product/ProductDetails';
 import Navbar from '../components/General/Navbar';
 import Product_Navbar from '../components/General/Product_Navbar';
@@ -14,19 +14,19 @@ const ProductDetailsPage = ({ currentWidth }) => {
     const productId = useParams();
     return (
         <div>
-            {/* google analytics */}
-             <ScreenViewTracker screenName="ProductDetailsPage" />
-             
+            <ScreenViewTracker screenName="ProductDetailsPage" />
             {
                 currentWidth < 640 ? <Product_Navbar /> : <Navbar />
             }
-            <Suspense fallback={<Loader/>}>
-            <ProductDetails productId={productId} />
-            <div className='mx-auto mt-8 mb-16 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
-                <h2 className="text-xl ml-4 md:text-3xl font-bold text-gray-900 text-left">Shop by categories</h2>
-                <Categories />
-            </div>
-            <Footer/>
+            <Suspense fallback={<Loader />}>
+                <ProductDetails productId={productId} />
+                <div className='mx-auto mb-6 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8'>
+                    <h2 className="text-xl md:text-2xl ml-4 text-gray-900 text-left py-2">
+                        <mark className='bg-accent-light'>Shop by categories</mark>
+                    </h2>
+                    <Categories />
+                </div>
+                <Footer />
             </Suspense>
         </div>
     )

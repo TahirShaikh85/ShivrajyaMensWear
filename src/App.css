@@ -212,9 +212,11 @@ section {
 }
 
 .price-main__heading {
-  font-size: 5rem;
+  text-transform: capitalize;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 4.5rem;
+  line-height: 2.5rem;
+  margin-top: 0.25rem;
 }
 
 .price-txt {
@@ -237,14 +239,14 @@ section {
 }
 
 .price-box__main-new {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 .price-box__main-discount {
   border: none;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   background-color: var(--pale-orange);
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -286,7 +288,7 @@ section {
 }
 
 .price-btn__txt {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
