@@ -1,14 +1,16 @@
 import { Fragment, useEffect, useState } from 'react'
+import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProductsByFiltersAsync, productCategory, selectAllCategories, selectAllLabels, fetchAllCategoriesAsync, fetchAllLabelsAsync, selectedProductCategory } from '../../Features/product/productSlice'
+import { fetchProductsByFiltersAsync, productCategory, selectAllProducts, selectAllCategories, selectAllLabels, fetchAllCategoriesAsync, fetchAllLabelsAsync, selectedProductCategory } from '../../Features/product/productSlice'
 
 
 const Filter = () => {
     // select filter object states coming from API
     const categories = useSelector(selectAllCategories);
     const labels = useSelector(selectAllLabels);
-    const selectedCategory = useSelector(selectedProductCategory)
+    const selectedCategory = useSelector(selectedProductCategory);
+    const newProducts = useSelector(selectAllProducts);
 
     // --------- filters ---------
     const filters = [
@@ -25,15 +27,12 @@ const Filter = () => {
     ]
 
     // ------- filter logic ------------
-
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [filter, setFilter] = useState({});
     const dispatch = useDispatch();
 
     const handleFilter = (e, section, option) => {
-
         const newFilter = { ...filter };
-
         if (e.target.checked) {
             newFilter[section.id] = option.value;
 
@@ -44,9 +43,7 @@ const Filter = () => {
             dispatch(productCategory("All"))
         }
         setFilter(newFilter);
-
         dispatch(fetchProductsByFiltersAsync(newFilter));
-
         setMobileFiltersOpen(false);
     }
 
@@ -59,32 +56,42 @@ const Filter = () => {
     return (
         <div>
             {/* -- for big screens -- */}
-            <form className="hidden lg:block mt-10 fixed">
-                <h2 className="text-2xl md:text-3xl tracking-wider font-bold text-gray-900 text-center md:text-left mb-5 font-agdasima">Filters</h2>
+            <form className="hidden lg:block">
+                <div className='flex justify-between'>
+                    <h2 className="text-2xl tracking-wider font-bold text-gray-900 text-center md:text-left mb-1 font-agdasima">
+                        Filters
+                    </h2>
+                    <div>
+                        <h2 className="text-lg tracking-wide font-bold text-gray-800 text-left capitalize">
+                            {selectedCategory}
+                        </h2>
+                        <span className='text-sm mb-4 text-gray-500'>
+                            {newProducts.length} items
+                        </span>
+                    </div>
+                </div>
                 {filters.map((section) => (
-                    <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
+                    <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-2">
                         {({ open }) => (
                             <>
-                                <h3 className="-my-3 flow-root">
-                                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-lg text-gray-400 hover:text-gray-500">
-                                        <span className="font-medium text-gray-900">{section.name}</span>
-                                        <span className="ml-6 flex items-center text-gray-900">
-                                            {open ? (
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-32">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
-                                                </svg>
-
-                                            ) : (
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-32">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                                </svg>
-
-                                            )}
+                                <h3 className="">
+                                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-1 text-gray-400 hover:text-gray-500">
+                                        <span className="font-medium text-gray-900">
+                                            {section.name}
                                         </span>
+                                        {/* <span className="ml-6 flex items-center text-gray-900"> */}
+                                        {open ? (
+                                            <MinusIcon className='w-5 h-5 text-right' stroke='#000' />
+
+                                        ) : (
+                                            <PlusIcon className='w-5 h-5 text-right' stroke='#000' />
+
+                                        )}
+                                        {/* </span> */}
                                     </Disclosure.Button>
                                 </h3>
-                                <Disclosure.Panel className="pt-6">
-                                    <div className="space-y-4">
+                                <Disclosure.Panel className="pt-2">
+                                    <div className="space-y-2">
                                         {section.options.map((option, optionIdx) => (
                                             <div key={option.value} className="flex items-center">
                                                 <input
@@ -94,11 +101,11 @@ const Filter = () => {
                                                     type="checkbox"
                                                     defaultChecked={selectedCategory === option.value}
                                                     onClick={(e) => handleFilter(e, section, option)}
-                                                    className="h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                                                    className="h-4 w-4 rounded border-gray-400 text-orange-600 focus:ring-orange-500"
                                                 />
                                                 <label
                                                     htmlFor={`filter-${section.id}-${optionIdx}`}
-                                                    className="ml-3 text-lg text-gray-600"
+                                                    className="ml-3 text-gray-600"
                                                 >
                                                     {option.label}
                                                 </label>

@@ -7,7 +7,7 @@ export default function ProductList({currentWidth}) {
     <div className="bg-white">
       <div>
 
-        <main className="mx-auto max-w-8xl px-0 sm:px-6 lg:px-16">
+        <main className="mx-auto max-w-8xl px-0 sm:px-6 lg:px-14">
 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
