@@ -12,15 +12,15 @@ export default function FeaturedProducts() {
   const navigate = useNavigate();
 
   return (
-    <div className="px-0 md:px-12 pt-0 pb-0 sm:px-6 sm:pt-10">
+    <div className="px-4 md:px-12 pt-0 pb-0 sm:px-6 sm:pt-10">
       <h2 className="text-2xl tracking-widest font-bold text-gray-900 text-center font-agdasima">
         Featured Products
       </h2>
       <SmallDivider />
 
-      <div className="mt-7 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-3 md:mt-7 grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-4">
         {featuredProducts.map((product) => (
-          <div key={product.id} className="group relative" onClick={() => navigate(`products/${product.id}`)}>
+          <div key={product.id} className="group relative mx-1" onClick={() => navigate(`products/${product.id}`)}>
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
               <img
                 src={product.thumbnail}
@@ -28,12 +28,12 @@ export default function FeaturedProducts() {
                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"
               />
             </div>
-            <div className="home-page-product-label mt-3 inline-block m-0 uppercase" style={{ fontSize: "10px" }}>
+            <div className="home-page-product-label mt-2 inline-block m-0 uppercase" style={{ fontSize: "10px" }}>
               <p className='' style={{}}>
                 {product.label}
               </p>
             </div>
-            <div className="mt-2 flex justify-between">
+            <div className="mt-1 flex justify-between">
               <div>
                 <h3 className="text-sm text-gray-700">
                   <a href={product.href}>
@@ -41,14 +41,14 @@ export default function FeaturedProducts() {
                     {product.name}
                   </a>
                 </h3>
-                <p className="mt-1 text-sm text-gray-500">{product.brand}</p>
+                <p className="mt-1 text-sm text-gray-500 capitalize">{product.brand}</p>
               </div>
               <p className="text-sm font-medium text-gray-900">₹{Math.round(product.price - (product.price * (product.discountPercentage / 100)))}</p>
             </div>
           </div>
         ))}
       </div>
-      <h4 className='text-center pt-4 flex justify-center items-center cursor-pointer text-gray-700 font-semibold' onClick={()=>navigate('/products')}>
+      <h4 className='hidden text-center pt-4 md:flex justify-center items-center cursor-pointer text-gray-700 font-semibold' onClick={()=>navigate('/products')}>
         Explore products of our store <ArrowLongRightIcon className='ml-2 w-5 h-5' />
       </h4>
     </div>

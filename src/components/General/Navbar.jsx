@@ -16,7 +16,7 @@ const Navbar = () => {
     // select wishlist items from redux store to display the wishlist items count on Navbar
     const items = useSelector(selectItems);
     return (
-        <nav className="flex items-center justify-between  py-1.5 px-0 md:px-14 bg-black text-white sticky top-0 z-10">
+        <nav className="flex items-center justify-center md:justify-between py-1.5 px-0 md:px-14 bg-black text-white sticky top-0 z-10">
             {/* Navigational Links (Hidden in Mobile) */}
             <ul className="hidden md:flex md:gap-x-8">
                 {
@@ -28,8 +28,8 @@ const Navbar = () => {
                 }
 
             </ul>
-            <ul className='flex gap-x-1'>
-                {/* mmaharaj Logo */}
+            <ul className='w-full md:w-fit flex justify-between gap-x-1'>
+                {/* maharaj Logo */}
                 <li>
                     <img src="https://firebasestorage.googleapis.com/v0/b/shivrajyamenswear.appspot.com/o/banner%2Fmaharaj2.png?alt=media&token=fbee43dc-a6c0-4b8b-a418-50eb17d6c012" alt="Left Logo" className="h-14 ml-2 lg:ml-8" />
                 </li>
@@ -37,16 +37,15 @@ const Navbar = () => {
                 <li>
                     <img src="https://firebasestorage.googleapis.com/v0/b/shivrajyamenswear.appspot.com/o/banner%2Flogo.png?alt=media&token=03c7de96-e4c8-41db-859a-cc5022e4e88d" alt="Center Logo" className="w-28 lg:w-28 mx-4" />
                 </li>
+                
             </ul>
             {/* Navigational Links (Hidden in Mobile) */}
             <ul className="hidden md:flex md:gap-x-8">
                 <li>
                     <NavLink to="/about" className="text-white hover:text-gray-400">Contact</NavLink>
-                    {/* <Search /> */}
                 </li>
                 <li>
                     <NavLink to="/about" className="text-white hover:text-gray-400">About</NavLink>
-                    {/* <Search /> */}
                 </li>
                 <li>
                     <NavLink to="/wishlist" value="/wishlist" className="text-white hover:text-gray-400 flex relative">

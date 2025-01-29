@@ -163,8 +163,8 @@ section {
 }
 
 .img-main {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 5%;
   cursor: pointer;
   margin-bottom: 0.5rem;
@@ -523,6 +523,7 @@ li {
   .img-main {
     border-radius: 0%;
     margin-bottom: .8rem;
+    width: 100%;
   }
 
   .img-btns {
@@ -530,9 +531,10 @@ li {
   }
 
   .price {
-    gap: 1rem;
-    padding: 0 1.2rem;
+    gap: 0.3rem;
+    padding: 1rem 1.2rem 1.2rem 1rem;
   }
+
 
   .price-sub__heading {
     font-size: 1rem;
@@ -545,7 +547,7 @@ li {
   }
 
   .price-txt {
-    margin-top: 1rem;
+    margin-top: 0rem;
     font-size: 1rem;
   }
 
@@ -581,8 +583,9 @@ li {
   }
 
   .price-cart__btn {
-    width: 100%;
-    margin-bottom: 4rem;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 3rem;
   }
 
   .btn--orange {

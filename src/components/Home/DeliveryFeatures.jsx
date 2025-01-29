@@ -8,10 +8,10 @@ const DeliveryFeatures = () => {
                 <mark className='bg-accent-light'>Welcome to Store</mark>
             </h4>
             <SmallDivider />
-            <p className='text-gray-600 w-1/2 mx-auto text-center px-2 mb-8'>
+            <p className='text-gray-600 w-[95%] md:w-1/2 mx-auto text-center px-2 mb-8'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium quis aut soluta quos nobis fugiat recusandae voluptas corporis ullam.
             </p>
-            <div className="delivery-features-container flex md:flex md:flex-row gap-6 md:gap-14 justify-center">
+            <div className="delivery-features-container grid grid-cols-2 md:flex md:flex-row gap-x-4 gap-y-6 md:gap-14 justify-center">
                 <div className="d-feature text-center">
                     <TruckIcon className='w-8 h-8 mx-auto mb-2' />
                     <mark className='font-semibold bg-accent-light'>Free Delivery</mark>

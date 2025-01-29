@@ -33,8 +33,8 @@ const Categories = () => {
     }
 
     return (
-        <div className='category-wrapper py-4 md:py-3 px-0 md:px-12'>
-            <div className="category-container flex flex-row gap-6 md:gap-7 overflow-x-scroll hide-scrollbar" ref={categoryContainerRef}>
+        <div className='category-wrapper py-4 md:py-3 px-2 md:px-12'>
+            <div className="category-container flex flex-row gap-x-1 md:gap-6 overflow-x-scroll hide-scrollbar" ref={categoryContainerRef}>
                     <NavLink to="/" value="/" className="category-box">
                         <div className="image-box w-20 h-20 md:w-24 md:h-24 pixalated">
                             <img src="https://firebasestorage.googleapis.com/v0/b/shivrajyamenswear.appspot.com/o/banner%2Fbigsale.png?alt=media&token=fc9f0c93-37ce-42d8-83eb-6a8e5b5d6168" alt="shirts" className='w-full h-full' style={{ borderRadius: '50%' }} />
