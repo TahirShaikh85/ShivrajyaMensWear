@@ -7,8 +7,7 @@ const WishlistPage = () => {
     <div>
       {/* google analytics */}
       <ScreenViewTracker screenName="WishlistPage" />
-
-        <Wishlist/>
+      <Wishlist />
     </div>
   )
 }

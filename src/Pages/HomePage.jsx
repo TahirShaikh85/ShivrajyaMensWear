@@ -5,7 +5,6 @@ import Banner from "../components/Home/Banner";
 import DeliveryFeatures from "../components/Home/DeliveryFeatures";
 import FeaturedProducts from "../components/Home/FeaturedProducts"
 import Navbar from "../components/General/Navbar";
-import Contact from "../components/Home/Contact";
 import Footer from "../components/General/Footer";
 import DiscountBannerHome from "../components/Home/DiscountBannerHome";
 import externalImages from "../assets/external-img.json"

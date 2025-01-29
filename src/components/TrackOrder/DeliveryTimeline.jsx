@@ -10,6 +10,7 @@ import { AttentionSeeker, Fade } from "react-awesome-reveal";
 import { selectTrackedOrderData, selectTrackedOrderError, trackedOrderData, trackedOrderError } from "../../Features/trackOrder/trackOrderSlice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { AdjustmentsVerticalIcon, ArchiveBoxIcon, ArrowPathRoundedSquareIcon, CheckBadgeIcon, TruckIcon, XCircleIcon } from "@heroicons/react/24/outline";
 
 
 export default function DeliveryTimeline() {
@@ -59,9 +60,7 @@ export default function DeliveryTimeline() {
         return {
           text: "pending",
           level: 1,
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-          </svg>
+          statusIcon: <ArrowPathRoundedSquareIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" /> 
           ,
           color: "purple"
         };
@@ -69,9 +68,7 @@ export default function DeliveryTimeline() {
         return {
           text: "being packed",
           level: 2,
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-          </svg>
+          statusIcon: <ArchiveBoxIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
 
           ,
           color: "blue",
@@ -80,9 +77,7 @@ export default function DeliveryTimeline() {
         return {
           text: "dispatched",
           level: 3,
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
-          </svg>
+          statusIcon: <AdjustmentsVerticalIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
           ,
           color: "orange",
         };
@@ -90,9 +85,7 @@ export default function DeliveryTimeline() {
         return {
           text: "on the way",
           level: 4,
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-          </svg>
+          statusIcon: <TruckIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
           ,
           color: "red",
         };
@@ -100,9 +93,7 @@ export default function DeliveryTimeline() {
         return {
           text: "delivered",
           level: 5,
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-          </svg>
+          statusIcon: <CheckBadgeIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
           ,
           color: "green",
         };
@@ -110,18 +101,14 @@ export default function DeliveryTimeline() {
         return {
           text: "cancelled",
           level: 0,
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+          statusIcon: <XCircleIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
           ,
           color: "red",
         };
       default:
         return {
           text: "pending",
-          statusIcon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-          </svg>
+          statusIcon: <ArrowPathRoundedSquareIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" /> 
           ,
           color: "purple"
         };

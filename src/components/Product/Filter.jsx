@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
-import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { FunnelIcon, MinusIcon, PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProductsByFiltersAsync, productCategory, selectAllProducts, selectAllCategories, selectAllLabels, fetchAllCategoriesAsync, fetchAllLabelsAsync, selectedProductCategory } from '../../Features/product/productSlice'
@@ -146,17 +146,14 @@ const Filter = () => {
                         >
                             <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
                                 <div className="flex items-center justify-between px-4">
-                                    <h2 className="text-lg font-medium text-gray-900 font-bold">Filters</h2>
+                                    <h2 className="text-lg text-gray-900 font-bold">Filters</h2>
                                     <button
                                         type="button"
                                         className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
                                         onClick={() => setMobileFiltersOpen(false)}
                                     >
                                         <span className="sr-only">Close menu</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-
+                                        <XMarkIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
                                     </button>
                                 </div>
 
@@ -173,13 +170,9 @@ const Filter = () => {
                                                             <span className="font-medium text-gray-900">{section.name}</span>
                                                             <span className="ml-6 flex items-center">
                                                                 {open ? (
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
-                                                                    </svg>
+                                                                     <MinusIcon strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" />
                                                                 ) : (
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-32">
-                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                                                    </svg>
+                                                                    <PlusIcon strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" />
                                                                 )}
                                                             </span>
                                                         </Disclosure.Button>
@@ -195,7 +188,7 @@ const Filter = () => {
                                                                         type="checkbox"
                                                                         defaultChecked={selectedCategory === option.value}
                                                                         onClick={(e) => handleFilter(e, section, option)}
-                                                                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        className="h-4 w-4 rounded border-gray-400 text-indigo-600 focus:ring-indigo-500"
                                                                     />
                                                                     <label
                                                                         htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -223,10 +216,7 @@ const Filter = () => {
                 onClick={() => setMobileFiltersOpen(true)}
             >
                 <span className="sr-only">Filters</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
-                </svg>
-
+                <FunnelIcon strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" />
             </button>
         </div>
     )

@@ -11,16 +11,12 @@ export default function ProductList({currentWidth}) {
 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-
               {/* Filters -- for big screens only */}
               {
                 currentWidth > 640 && <Filter/>
               }
-
-
               {/* Product grid */}
               <div className="lg:col-span-3">
-                {/* Your content */}
                 <Allproducts />
               </div>
             </div>

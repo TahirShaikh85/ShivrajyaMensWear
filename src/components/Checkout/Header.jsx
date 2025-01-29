@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/images/categories/logo.png'
+import { CheckIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const Header = () => {
     return (
@@ -13,21 +14,17 @@ const Header = () => {
                     <ul className="relative flex w-full items-center justify-between space-x-2 sm:space-x-4">
                         <li className="flex items-center space-x-3 text-left sm:space-x-4">
                             <Link className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-200 text-xs font-semibold text-emerald-700" to="#"
-                            ><svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg
-                                ></Link>
+                            >
+                                <CheckIcon className="h-5 w-5" strokeWidth={1.5} />
+                                </Link>
                             <span className="font-semibold text-gray-900">Shop</span>
                         </li>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <ChevronRightIcon className="h-4 w-4 text-gray-400" strokeWidth={2} />
                         <li className="flex items-center space-x-3 text-left sm:space-x-4">
                             <Link className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-600 text-xs font-semibold text-white ring ring-orange-600 ring-offset-2" to="#">2</Link>
                             <span className="font-semibold text-gray-900">Shipping</span>
                         </li>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <ChevronRightIcon className="h-4 w-4 text-gray-400" strokeWidth={2} />
                         <li className="flex items-center space-x-3 text-left sm:space-x-4">
                             <Link className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-400 text-xs font-semibold text-white" to="#">3</Link>
                             <span className="font-semibold text-gray-500">Payment</span>
